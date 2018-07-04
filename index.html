@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Train-Scheduler</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Added link to the jQuery Library -->
+
+    <!-- Style to fix the issue of text extending past panel length -->
+    <style>
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="jumbotron" style="background-color: rgb(175, 38, 38); color: white;">
+            <h1 class="animated fadeInDown" style="text-align: center">
+                <i class="fas fa-train"></i>
+                <strong> Train-Scheduler</strong>
+            </h1>
+        </div>
+    </div>
+    <div class="container" id="train-table">
+        <div class="card">
+            <h5 class="card-header" style="background-color: #828b8f; color: white;">Current Train Schedule</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr id="tr">
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <br>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <div id="row" class="container">
+        <div class="card">
+            <h5 class="card-header" style="background-color: #828b8f; color: white;">Add Train</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="train">Train Name</label>
+                        <input type="train" class="form-control" id="train" name="train">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="destination" class="form-control" id="destination" name="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="first">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first" name="first">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="frequency" class="form-control" id="frequency" name="frequency">
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="submit" style="background-color: rgb(175, 38, 38); color: white;">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
